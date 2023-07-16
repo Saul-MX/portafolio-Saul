@@ -1,0 +1,237 @@
+
+.resume__container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/*CURRICULUM IZQUIERDA*/
+.resume__left{
+    flex-basis: 58%;
+    margin-right: 1.5rem;
+}
+
+
+.resume__timelines{
+    margin-bottom: 5rem;
+}
+
+.timelines__items{
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.timeline__header{
+    flex-basis: 30%;
+    text-align: right;
+    padding-right: 2.5rem;
+}
+
+.timeline__year{
+    margin: 0.3rem 0;
+    line-height: 1.9rem;
+    font-size: 1.4rem;
+}
+
+.timeline__company{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--color-company);
+}
+
+.timeline__description{
+    width: 70%;
+    padding-left: 2.5rem;
+    padding-right: 1.5rem;
+}
+
+.timeline__title{
+    font-style: 1.6rem;
+    margin-bottom: 0.3rem;
+}
+
+.timeline__text{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.timeline__divider{
+    position: absolute;
+    top: 0;
+    left: 30%;
+    bottom: -1.8rem;
+    width: 1px;
+    background-color: var(--color-company);
+}
+
+.timeline__divider::before{
+    content: "";
+    position: absolute;
+    margin-top: 0.4rem;
+    margin-left: -0.8rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    background-color: var(--color-secondary);
+    border-radius: 10rem;
+    opacity: 0.25;
+}
+
+.timeline__divider::after{
+    content: "";
+    position: absolute;
+    margin-top: 0.8rem;
+    margin-left: -0.4rem;
+    width: .9rem;
+    height: .9rem;
+    background-color: var(--color-principal);
+    border-radius: 10rem;
+    border: 2px solid var(--color-secondary);
+    opacity: 1;
+}
+
+
+/*CURRICULUM DERECHA*/
+.resume__right{
+    flex-basis: 41%;
+    padding: 0 1.5rem;
+}
+
+.resume__skills{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.skills__title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills__text{
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    margin-bottom: .4rem;
+}
+
+.skills__number{
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.4rem;
+    color: var(--color-subtitles);
+}
+
+.skills__progressbar{
+    height: 1rem;
+    border: 1px solid var(--color-secondary);
+    border-radius: 1rem;
+    background-color: var(--color-principal);
+    margin-bottom: 1rem;
+}
+
+.skills__percentage{
+    height: 0.8rem;
+    background-color: var(--color-secondary);
+    border: 2px solid var(--color-principal);
+    border-radius: 1rem;
+}
+
+.skills__percentage--p1{width: 96%;}
+.skills__percentage--p2{width: 97%;}
+.skills__percentage--p3{width: 94%;}
+.skills__percentage--p4{width: 96%;}
+.skills__percentage--p5{width: 97%;}
+.skills__percentage--p6{width: 95%;}
+.skills__percentage--p7{width: 96%;}
+.skills__percentage--p8{width: 100%;}
+
+.knowledges__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.knowledges__option{
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    font-size: 1.4rem;
+    background-color: var(--color-secondary);
+    border-radius: 0.3rem;
+    color: var(--color-principal);
+}
+
+.certificates__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.certificate__item{
+    flex-basis: calc(50% - 5rem);
+    border: 2px solid var(--color-border-reviews);
+    border-radius: 0.8rem;
+
+    display: flex;
+    flex-direction: row;
+
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+
+.certificate__logo{
+    width: 20rem;
+    height: 100%;
+    padding: 1rem;
+    background-color: #e5e6e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate__img{
+    width: 100%;
+}
+
+.certificate__content{
+    padding: 2rem 2.5rem;
+}
+
+.certificate__title{
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.certificate__name{
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 1.3rem;
+    color: var(--color-subtitles);
+}
+
+.certificate__date{
+    display: block;
+    font-size: 1.2rem;
+    color: var(--color-title);
+}
+
+.certificate__info{
+    font-size: 1.2rem;
+    display: block;
+    color: var(--color-subtitles);
+}
+
+.certificate__item--up{
+    transform: translateY(-100px);
+}
+
+.certificate__item--right{
+    transform: translateX(100px);
+}
+
+.certificates__container article.visible{
+    opacity: 1;
+    transform: scale(1) translateY(0); 
+}
